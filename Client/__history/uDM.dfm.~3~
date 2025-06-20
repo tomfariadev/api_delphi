@@ -1,0 +1,19 @@
+object DM: TDM
+  Height = 480
+  Width = 640
+  object RESTClient1: TRESTClient
+    BaseURL = 'http://localhost:9000/tarefas'
+    Params = <>
+    SynchronizedEvents = False
+    Left = 40
+    Top = 24
+  end
+  object ReqTarefaGet: TRESTRequest
+    AssignedValues = [rvConnectTimeout, rvReadTimeout]
+    Client = RESTClient1
+    Params = <>
+    SynchronizedEvents = False
+    Left = 40
+    Top = 104
+  end
+end

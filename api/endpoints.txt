@@ -1,0 +1,30 @@
+# Listar todas as tarefas => GET "/tarefas"
+URL: http://localhost:9000/tarefas
+
+
+# Adicionar nova tarefa => POST	"/tarefas"
+URL: http://localhost:9000/tarefas
+
+Custom body:
+{
+  "titulo": "Nova tarefa",
+  "descricao": "Nova tarefa criada para teste",
+  "prioridade": 1
+}
+
+
+# Atualizar o status da tarefa => PUT "/tarefas/:id/status"
+URL: http://localhost:9000/tarefas/1/status
+
+Custom body:
+{
+  "status": "C"
+}
+
+
+# Remover tarefa => DELETE "/tarefas/:id" 
+URL: http://localhost:9000/tarefas/1
+
+
+# Calculo do total, média, etc => GET "/stats"
+URL: http://localhost:9000/stats

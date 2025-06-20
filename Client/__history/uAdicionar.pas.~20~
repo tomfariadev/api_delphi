@@ -1,0 +1,70 @@
+unit uAdicionar;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, Vcl.StdCtrls, Vcl.ExtCtrls, Vcl.Buttons,
+  REST.Client, REST.Types, System.JSON;
+
+type
+  TFAdicionar = class(TForm)
+    edtTitulo: TEdit;
+    lblTitulo: TLabel;
+    edtDescricao: TEdit;
+    Label1: TLabel;
+    rgPrioridade: TRadioGroup;
+    BAdicionar: TBitBtn;
+    procedure BAdicionarClick(Sender: TObject);
+  private
+
+  public
+
+  end;
+
+var
+  FAdicionar: TFAdicionar;
+
+implementation
+
+{$R *.dfm}
+
+uses uDM;
+
+procedure TFAdicionar.BAdicionarClick(Sender: TObject);
+var
+  Req: TRESTRequest;
+  JsonBody: TJSONObject;
+begin
+  Req := TRESTRequest.Create(nil);
+  try
+    Req.Client := DM.RestClient1;
+    Req.Method := rmPOST;
+    Req.Resource := 'tarefas';
+
+    JsonBody := TJSONObject.Create;
+    try
+      JsonBody.AddPair('titulo', EdtTitulo.Text);
+      JsonBody.AddPair('descricao', EdtDescricao.Text);
+      JsonBody.AddPair('prioridade', TJSONNumber.Create(rgPrioridade.ItemIndex + 1));
+
+      Req.AddBody(JsonBody.ToString, ctAPPLICATION_JSON);
+    finally
+      JsonBody.Free;
+    end;
+
+    Req.Execute;
+
+    if Req.Response.StatusCode in [200, 201] then
+    begin
+      ShowMessage('Tarefa adicionada com sucesso!');
+      ModalResult := mrOk;
+    end
+    else
+      ShowMessage('Erro: ' + Req.Response.Content);
+  finally
+    Req.Free;
+  end;
+end;
+
+end.

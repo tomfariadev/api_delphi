@@ -1,0 +1,65 @@
+object FAdicionar: TFAdicionar
+  Left = 0
+  Top = 0
+  Caption = 'Adicionar nova tarefa'
+  ClientHeight = 295
+  ClientWidth = 288
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -12
+  Font.Name = 'Segoe UI'
+  Font.Style = []
+  TextHeight = 15
+  object lblTitulo: TLabel
+    Left = 24
+    Top = 24
+    Width = 30
+    Height = 15
+    Caption = 'T'#237'tulo'
+  end
+  object Label1: TLabel
+    Left = 24
+    Top = 80
+    Width = 51
+    Height = 15
+    Caption = 'Descri'#231#227'o'
+  end
+  object edtTitulo: TEdit
+    Left = 24
+    Top = 45
+    Width = 237
+    Height = 23
+    TabOrder = 0
+  end
+  object edtDescricao: TEdit
+    Left = 24
+    Top = 101
+    Width = 237
+    Height = 23
+    TabOrder = 1
+  end
+  object RadioGroup1: TRadioGroup
+    Left = 24
+    Top = 138
+    Width = 237
+    Height = 76
+    Caption = 'Prioridade'
+    Columns = 5
+    Items.Strings = (
+      '1'
+      '2'
+      '3'
+      '4'
+      '5')
+    TabOrder = 2
+  end
+  object BAdicionar: TBitBtn
+    Left = 24
+    Top = 240
+    Width = 237
+    Height = 33
+    Caption = 'Adicionar'
+    TabOrder = 3
+  end
+end

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/01/09 20:26:21.000.101,=C:\Users\Tom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/01/10 17:53:29.000.044,=C:\Users\Tom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/06/16 21:06:10.000.842,=C:\Users\Tom\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2025/06/17 09:30:03.000.696,D:\Software\Delphi\testes\Montreal\api\api.dproj=C:\Users\Tom\Documents\Embarcadero\Studio\Projects\Project1.dproj</Transaction>
+    <Transaction>2025/06/17 17:00:24.000.670,=D:\Software\Delphi\testes\Montreal\api\Unit1.pas</Transaction>
+    <Transaction>2025/06/17 17:00:38.000.702,D:\Software\Delphi\testes\Montreal\api\Unit1.pas=D:\Software\Delphi\testes\Montreal\api\uTarefa.pas</Transaction>
+    <Transaction>2025/06/17 17:00:49.000.454,=D:\Software\Delphi\testes\Montreal\api\Unit1.pas</Transaction>
+    <Transaction>2025/06/17 17:01:04.000.038,D:\Software\Delphi\testes\Montreal\api\Unit1.pas=D:\Software\Delphi\testes\Montreal\api\uTarefaDAO.pas</Transaction>
+    <Transaction>2025/06/17 18:38:49.000.077,=D:\Software\Delphi\testes\Montreal\api\Unit1.pas</Transaction>
+    <Transaction>2025/06/17 18:38:58.000.683,D:\Software\Delphi\testes\Montreal\api\Unit1.pas=D:\Software\Delphi\testes\Montreal\api\uConexao.pas</Transaction>
+  </Transactions>
+</BorlandProject>

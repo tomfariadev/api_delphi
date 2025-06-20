@@ -1,0 +1,17 @@
+program Client;
+
+uses
+  Vcl.Forms,
+  uMain in 'uMain.pas' {FMain},
+  uAdicionar in 'uAdicionar.pas' {FAdicionar},
+  uDM in 'uDM.pas' {DM: TDataModule};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TDM, DM);
+  Application.CreateForm(TFMain, FMain);
+  Application.Run;
+end.

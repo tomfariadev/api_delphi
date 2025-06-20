@@ -1,0 +1,25 @@
+unit uTarefa;
+
+interface
+
+uses
+  System.Classes, SysUtils;
+
+type
+  TTarefa = Class
+    private
+      FID: integer;
+      FTitulo: String;
+      FDescription: string;
+      FPriority: Integer;
+      FStatus: string;
+      FCreatedAt: TDateTime;
+      FCompletedAt: TDateTime;
+    public
+      constructor Create; virtual;
+      destructor Destroy; override;
+  End;
+
+implementation
+
+end.
